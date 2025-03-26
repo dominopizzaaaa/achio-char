@@ -1,0 +1,92 @@
+.products-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 2rem;
+  background-color: #fffdf5;
+  color: #333;
+}
+
+.products-page h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #b03a2e;
+  margin-bottom: 0.5rem;
+}
+
+.products-page .tagline {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7b7b7b;
+  margin-bottom: 3rem;
+}
+
+.product-feature {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.achar-image {
+  flex: 1 1 350px;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  flex: 1 1 400px;
+}
+
+.product-info h2 {
+  font-size: 2rem;
+  color: #d35400;
+  margin-bottom: 1rem;
+}
+
+.product-info p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.product-details {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.product-details li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.order-button {
+  display: inline-block;
+  background-color: #ff5e5b;
+  color: white;
+  padding: 0.9rem 1.6rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #e04845;
+}
+
+/* Fade-in on load */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

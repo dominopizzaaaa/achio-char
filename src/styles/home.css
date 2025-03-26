@@ -1,0 +1,78 @@
+/* 🌶️ Fresh Home Page Design */
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fffef9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 85vh;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffe066; /* turmeric yellow */
+}
+
+.hero-overlay p {
+  font-size: 1.3rem;
+  margin-bottom: 1.8rem;
+  font-weight: 300;
+}
+
+.hero-button {
+  background-color: #ff5e5b; /* chili red */
+  color: white;
+  padding: 0.9rem 1.6rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #e04845;
+}
+
+/* 🎬 Fade-in on page load */
+.fade-in {
+  animation: fadeIn 1s ease-out both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
