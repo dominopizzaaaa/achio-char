@@ -1,3 +1,9 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .navbar {
   background: #bd5b48;
   padding: 0.8rem 2rem;
