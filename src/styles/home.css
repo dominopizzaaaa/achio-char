@@ -83,3 +83,37 @@
     transform: translateY(0);
   }
 }
+
+/* 📱 Responsive Styles for Home Page */
+@media screen and (max-width: 768px) {
+  .home-page {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero-overlay {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .background-fader {
+    background-position: center;
+    background-size: cover;
+  }
+}

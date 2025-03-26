@@ -125,3 +125,48 @@
 .fade-in {
   animation: fadeInText 1s ease-out;
 }
+
+@media screen and (max-width: 768px) {
+  .products-page {
+    padding: 2rem 1rem;
+  }
+
+  .products-page h1 {
+    font-size: 2rem;
+  }
+
+  .products-page .tagline {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .product-feature {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .achar-image {
+    width: 100%;
+    max-width: 320px;
+    margin: auto;
+  }
+
+  .product-info {
+    padding-top: 1.5rem;
+  }
+
+  .product-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .product-info p {
+    font-size: 1rem;
+  }
+
+  .order-button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.9rem 1.2rem;
+  }
+}

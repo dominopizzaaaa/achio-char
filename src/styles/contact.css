@@ -105,3 +105,36 @@
     transform: translateY(0);
   }
 }
+
+/* 📱 Responsive Styles for Contact Page */
+@media screen and (max-width: 768px) {
+  .contact-page {
+    padding: 2rem 1rem;
+  }
+
+  .contact-card {
+    padding: 2rem 1.2rem;
+    border-radius: 18px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-subtext,
+  .contact-whisper {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .whatsapp-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .contact-footer-note {
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+  }
+}
