@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="footer-content">
         <div className="footer-left">
-          <p>Made with ❤️ by the A’Chio sisters</p>
+          <p>Made with ❤️ by Nainai's granddaughters</p>
           <p>&copy; {new Date().getFullYear()} A’Chio Achar</p>
         </div>
 
