@@ -1,8 +1,8 @@
 .navbar {
-  background: #ffe3ec;
+  background: #bd5b48;
   padding: 0.8rem 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid #ffd6e0;
+  border-bottom: 1px solid #a84e40;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -19,9 +19,9 @@
 .navbar-brand {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #c44569;
+  color: #ffffff; /* changed to white */
   font-family: 'Georgia', serif;
-  margin-right: 30rem; /* 👈 creates spacing from nav links */
+  margin-right: 30rem; /* if too wide on smaller screens, reduce */
 }
 
 .navbar-links {
@@ -30,7 +30,7 @@
 }
 
 .navbar-links a {
-  color: #7b2d3c;
+  color: #ffffff; /* changed to white */
   font-weight: 500;
   font-size: 1.05rem;
   text-decoration: none;
@@ -40,10 +40,11 @@
 }
 
 .navbar-links a:hover {
-  background-color: #ffdce5;
-  color: #b03a2e;
+  background-color: #a84e40; /* darker red on hover */
+  color: #ffe6e0; /* soft light */
 }
 
+/* Mobile styles */
 @media screen and (max-width: 768px) {
   .navbar-content {
     flex-direction: column;

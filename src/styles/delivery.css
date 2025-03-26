@@ -1,0 +1,84 @@
+.delivery-page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #fffaf6, #fffefc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+}
+
+.delivery-card {
+  background-color: #ffffff;
+  padding: 3rem;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  animation: fadeInUp 1s ease-out both;
+}
+
+.delivery-card h1 {
+  font-size: 2.5rem;
+  color: #bd5b48;
+  margin-bottom: 1.5rem;
+  font-family: 'Georgia', serif;
+}
+
+.delivery-card p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4c372f;
+  margin-bottom: 1.2rem;
+}
+
+.whatsapp-delivery-button {
+  display: inline-block;
+  background-color: #25D366;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-top: 2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-delivery-button:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.04);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media screen and (max-width: 768px) {
+  .delivery-card {
+    padding: 2rem;
+  }
+
+  .delivery-card h1 {
+    font-size: 2rem;
+  }
+
+  .delivery-card p {
+    font-size: 1rem;
+  }
+
+  .whatsapp-delivery-button {
+    font-size: 1rem;
+    padding: 0.9rem 1.6rem;
+  }
+}

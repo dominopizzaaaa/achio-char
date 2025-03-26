@@ -22,10 +22,13 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="about-images">
-          <img src={nainai} alt="Grandmother making achar" />
-          <img src={sisters} alt="The sisters with their grandmother" />
+        <div className="nainai-photo">
+          <img src={nainai} alt="Nainai" />
         </div>
+      </div>
+
+      <div className="sisters-photo-row">
+        <img src={sisters} alt="Sisters with Nainai" />
       </div>
     </div>
   );

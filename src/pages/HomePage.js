@@ -39,7 +39,7 @@ export default function HomePage() {
         <p className="fade-in-text delay-3">
           What started in their kitchen has now become a full-hearted business. Every jar is filled with tradition, care, and the tangy magic of their nainai’s hands.
         </p>
-        <a href="/products" className="hero-button fade-in-text delay-4">Explore Our Achar</a>
+        <a href="/products" className="hero-button fade-in-text delay-4">Browse Our Achars🍽️</a>
       </div>
     </div>
   );

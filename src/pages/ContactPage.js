@@ -16,7 +16,7 @@ export default function ContactPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          📞 WhatsApp Us!
+          📞 Order Now!
         </a>
 
         <div className="contact-footer-note">We respond within the day 🌶️✨</div>
