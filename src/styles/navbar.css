@@ -9,9 +9,7 @@ body, html {
   padding: 0.8rem 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid #a84e40;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: relative;
 }
 
 .navbar-content {
