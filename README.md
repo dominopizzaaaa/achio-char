@@ -40,7 +40,7 @@ A lovingly built React-based website for a family-run achar (pickle) business fo
 ## 📱 WhatsApp Contact
 
 All orders and inquiries are directed to:  
-**[+65 8119 2872](https://wa.me/6581192872)**
+**[+65 **** ****]**
 
 ## 👩‍🍳 Built with Love
 
