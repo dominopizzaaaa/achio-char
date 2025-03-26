@@ -13,7 +13,7 @@ export default function ContactPage() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          📞 WhatsApp +65 8119 2872
+          📞 WhatsApp Us!
         </a>
       </div>
     </div>
