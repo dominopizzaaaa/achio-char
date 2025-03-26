@@ -10,7 +10,7 @@ export default function AboutPage() {
           <h1>Our Story</h1>
 
           <p>
-            After their grandfather passed away in 2022, life grew quiet for Nainai. The kitchen — once alive with chatter and the scent of simmering spices — felt empty. Her hands still remembered the way, but her heart had lost its rhythm. Her granddaughters couldn’t bear to see the light dim in the woman who once lit up every room.
+            After their grandfather passed away in 2021, life grew quiet for Nainai. The kitchen — once alive with chatter and the scent of simmering spices — felt empty. Her hands still remembered the way, but her heart had lost its rhythm. Her granddaughters couldn’t bear to see the light dim in the woman who once lit up every room.
           </p>
 
           <p>
