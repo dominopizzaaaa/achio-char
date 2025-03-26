@@ -1,104 +1,106 @@
 .contact-page {
   min-height: 100vh;
-  background: radial-gradient(circle at top left, #fff4e6, #fffef9);
+  background: linear-gradient(to bottom right, #fff6f0, #fffaf8);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 2rem;
 }
 
 .contact-card {
-  background-color: #ffffff;
-  padding: 3.5rem 3rem;
-  border-radius: 22px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3.5rem 2.5rem;
+  border-radius: 24px;
   max-width: 600px;
   width: 100%;
   text-align: center;
-  animation: fadeIn 0.9s ease-in-out both;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  animation: riseFade 1.2s ease-out both;
 }
 
-.fancy-contact {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(10px);
-  border: 1px solid #fce4d6;
-  position: relative;
+.glassy-effect {
+  backdrop-filter: blur(16px);
+  border: 1px solid #f5e1d9;
 }
 
 .contact-title {
   font-size: 2.7rem;
-  color: #c44569;
+  font-weight: bold;
+  color: #bd5b48;
   font-family: 'Georgia', serif;
   margin-bottom: 1rem;
 }
 
 .contact-subtext {
   font-size: 1.2rem;
-  color: #4e4e4e;
-  margin-bottom: 0.8rem;
+  color: #444;
+  margin-bottom: 0.5rem;
 }
 
 .contact-whisper {
   font-size: 0.95rem;
-  color: #b98c62;
+  color: #a27c62;
   font-style: italic;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2rem;
 }
 
 .whatsapp-button {
   display: inline-block;
-  background-color: #25D366;
-  color: white;
-  font-size: 1.1rem;
-  font-weight: bold;
+  background: linear-gradient(to right, #ffddd2, #ffe8e0);
+  color: #b03a2e;
+  font-size: 1.05rem;
+  font-weight: 600;
   padding: 1rem 2rem;
   border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(255, 185, 164, 0.25);
 }
 
 .whatsapp-button:hover {
-  background-color: #1ebe5d;
-  transform: scale(1.05);
+  background: linear-gradient(to right, #ffece3, #fff3ed);
+  color: #a63a24;
+  transform: translateY(-2px) scale(1.02);
 }
 
-/* Glow ring effect */
-.glowing-button {
+.glowing-hover {
   position: relative;
-  z-index: 1;
 }
 
-.glowing-button::before {
-  content: '';
+.glowing-hover::before {
+  content: "";
   position: absolute;
   top: -6px;
   left: -6px;
   right: -6px;
   bottom: -6px;
-  background: radial-gradient(circle, #25D36655 0%, transparent 70%);
+  background: radial-gradient(circle, #ffe6dcaa 0%, transparent 70%);
   border-radius: 16px;
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.glowing-button:hover::before {
+.glowing-hover:hover::before {
   opacity: 1;
 }
 
 .contact-footer-note {
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   font-size: 0.9rem;
-  color: #888;
+  color: #999;
   font-style: italic;
 }
 
-/* Fade-in */
+/* Animations */
+.fade-in {
+  animation: fadeIn 1s ease both;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(25px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -106,38 +108,29 @@
   }
 }
 
-/* 📱 Responsive Styles for Contact Page */
-@media screen and (max-width: 768px) {
-  .contact-page {
-    padding: 2rem 1rem;
+@keyframes riseFade {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(40px);
   }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
 
+/* Mobile tweaks */
+@media (max-width: 600px) {
   .contact-card {
-    padding: 2rem 1.2rem;
-    border-radius: 18px;
+    padding: 2rem 1.5rem;
   }
 
   .contact-title {
     font-size: 2rem;
   }
 
-  .contact-subtext,
-  .contact-whisper {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
   .whatsapp-button {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 1rem;
     font-size: 1rem;
-    white-space: normal;
-  }
-
-  .contact-footer-note {
-    font-size: 0.85rem;
-    margin-top: 1.5rem;
+    padding: 0.9rem 1.6rem;
   }
 }
