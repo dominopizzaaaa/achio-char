@@ -1,0 +1,45 @@
+.navbar {
+  background: #ffe3ec;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #ffd6e0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #c44569;
+  font-family: 'Georgia', serif;
+  margin-right: 30rem; /* 👈 creates spacing from nav links */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: #7b2d3c;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: all 0.25s ease-in-out;
+}
+
+.navbar-links a:hover {
+  background-color: #ffdce5;
+  color: #b03a2e;
+}

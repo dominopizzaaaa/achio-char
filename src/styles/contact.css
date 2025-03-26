@@ -4,30 +4,45 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .contact-card {
   background-color: #ffffff;
-  padding: 3rem;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  padding: 3.5rem 3rem;
+  border-radius: 22px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
   max-width: 600px;
   width: 100%;
   text-align: center;
-  animation: fadeIn 0.8s ease-in-out both;
+  animation: fadeIn 0.9s ease-in-out both;
 }
 
-.contact-card h1 {
-  font-size: 2.5rem;
-  color: #b03a2e;
+.fancy-contact {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid #fce4d6;
+  position: relative;
+}
+
+.contact-title {
+  font-size: 2.7rem;
+  color: #c44569;
+  font-family: 'Georgia', serif;
   margin-bottom: 1rem;
 }
 
-.contact-card p {
+.contact-subtext {
   font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 2rem;
+  color: #4e4e4e;
+  margin-bottom: 0.8rem;
+}
+
+.contact-whisper {
+  font-size: 0.95rem;
+  color: #b98c62;
+  font-style: italic;
+  margin-bottom: 2.2rem;
 }
 
 .whatsapp-button {
@@ -36,19 +51,50 @@
   color: white;
   font-size: 1.1rem;
   font-weight: bold;
-  padding: 0.9rem 1.8rem;
-  border-radius: 10px;
+  padding: 1rem 2rem;
+  border-radius: 12px;
   text-decoration: none;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .whatsapp-button:hover {
   background-color: #1ebe5d;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* Smooth fade-in */
+/* Glow ring effect */
+.glowing-button {
+  position: relative;
+  z-index: 1;
+}
+
+.glowing-button::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: radial-gradient(circle, #25D36655 0%, transparent 70%);
+  border-radius: 16px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.glowing-button:hover::before {
+  opacity: 1;
+}
+
+.contact-footer-note {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* Fade-in */
 @keyframes fadeIn {
   from {
     opacity: 0;

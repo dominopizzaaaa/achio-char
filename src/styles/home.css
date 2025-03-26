@@ -1,63 +1,61 @@
-/* 🌶️ Fresh Home Page Design */
-
 .home-page {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #fffef9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero {
   position: relative;
-  width: 100%;
-  max-width: 1100px;
-  height: 85vh;
-  border-radius: 18px;
+  height: 100vh;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
 }
 
-.hero-bg {
+.background-fader {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: brightness(0.7);
+  background-size: cover;
+  background-position: center;
+  transition: background-image 2s ease-in-out; /* 🐢 silky slow fade */
+  z-index: 0;
+  filter: brightness(0.5);
 }
 
 .hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 1;
   text-align: center;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.45);
-  padding: 2rem 3rem;
+  max-width: 850px;
+  padding: 2.5rem;
+  color: white;
   border-radius: 16px;
-  backdrop-filter: blur(4px);
+}
+
+.fancy-glass {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
 .hero-overlay h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #ffe066;
   margin-bottom: 1rem;
-  color: #ffe066; /* turmeric yellow */
 }
 
 .hero-overlay p {
-  font-size: 1.3rem;
-  margin-bottom: 1.8rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
   font-weight: 300;
 }
 
 .hero-button {
-  background-color: #ff5e5b; /* chili red */
+  background-color: #ff5e5b;
   color: white;
-  padding: 0.9rem 1.6rem;
+  padding: 0.9rem 1.8rem;
   font-size: 1.1rem;
   font-weight: bold;
-  border: none;
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.3s ease;
@@ -67,12 +65,21 @@
   background-color: #e04845;
 }
 
-/* 🎬 Fade-in on page load */
-.fade-in {
-  animation: fadeIn 1s ease-out both;
+/* 🪄 Fancy staggered fade-in */
+.fade-in-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInText 1.5s ease forwards;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+.delay-1 { animation-delay: 0.5s; }
+.delay-2 { animation-delay: 1.2s; }
+.delay-3 { animation-delay: 2s; }
+.delay-4 { animation-delay: 2.8s; }
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
