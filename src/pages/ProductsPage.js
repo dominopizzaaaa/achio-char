@@ -27,6 +27,15 @@ export default function ProductsPage() {
           <a href="/contact" className="order-button">Order via WhatsApp</a>
         </div>
       </div>
+      <div className="video-section fade-in">
+        <h3>Lovingly Packed by Hand</h3>
+        <p>Nainai makes sure each jar is sealed with care (and a sprinkle of love). Watch her in action:</p>
+        <video
+          src={require('../assets/nainai-packing.MOV')}
+          controls
+          className="product-video"
+        />
+      </div>
     </div>
   );
 }

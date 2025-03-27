@@ -8,17 +8,27 @@
   background-color: #111;
 }
 
-.background-fader {
+.background-fader,
+.background-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
   background-size: cover;
   background-position: center;
-  transition: background-image 2s ease-in-out; /* 🐢 silky slow fade */
   z-index: 0;
   filter: brightness(0.5);
+  transition: opacity 2s ease-in-out;
+}
+
+.background-video {
+  opacity: 0;
+}
+
+.background-video.active {
+  opacity: 1;
 }
 
 .hero-overlay {
@@ -32,44 +42,47 @@
 
 .fancy-glass {
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hero-overlay h1 {
   font-size: 3.2rem;
   font-weight: bold;
   color: #ffe066;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
 }
 
 .hero-overlay p {
   font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 3rem; /* 🪄 Increased spacing */
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
   font-weight: 300;
 }
 
 .hero-button {
-  background-color: #ff5e5b;
+  background: linear-gradient(to right, #ff7675, #ff5e5b);
   color: white;
-  padding: 0.9rem 1.8rem;
+  padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 20px rgba(255, 94, 91, 0.3);
+  transition: all 0.3s ease;
 }
 
 .hero-button:hover {
-  background-color: #e04845;
+  background: linear-gradient(to right, #ff5e5b, #ff7675);
+  transform: scale(1.05);
 }
 
 /* 🪄 Fancy staggered fade-in */
 .fade-in-text {
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInText 1.5s ease forwards;
+  animation: fadeInText 1.6s ease forwards;
 }
 
 .delay-1 { animation-delay: 0.5s; }
@@ -84,7 +97,7 @@
   }
 }
 
-/* 📱 Responsive Styles for Home Page */
+/* 📱 Responsive Styles */
 @media screen and (max-width: 768px) {
   .home-page {
     flex-direction: column;
@@ -93,7 +106,7 @@
   }
 
   .hero-overlay {
-    padding: 1.5rem;
+    padding: 1.8rem;
     max-width: 90%;
   }
 
@@ -102,21 +115,13 @@
   }
 
   .hero-overlay p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 2.5rem; /* 🪄 Increased spacing */
-    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
   }
-  
 
   .hero-button {
     width: 100%;
     font-size: 1rem;
-    padding: 0.8rem 1.2rem;
-  }
-
-  .background-fader {
-    background-position: center;
-    background-size: cover;
+    padding: 0.9rem 1.5rem;
   }
 }
