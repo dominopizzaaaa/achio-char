@@ -25,6 +25,7 @@ export default function HomePage() {
           autoPlay
           muted
           loop
+          playsInline
         />
       ) : (
         <div

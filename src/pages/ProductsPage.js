@@ -33,6 +33,10 @@ export default function ProductsPage() {
         <video
           src={require('../assets/nainai-packing.MOV')}
           controls
+          autoPlay
+          muted
+          loop
+          playsInline
           className="product-video"
         />
       </div>
