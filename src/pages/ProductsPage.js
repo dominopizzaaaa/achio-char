@@ -1,4 +1,4 @@
-import achar from '../assets/achar.jpg';
+import achar from '../assets/achar2.jpg';
 import '../styles/products.css';
 
 export default function ProductsPage() {
