@@ -2,28 +2,23 @@ import { useEffect, useState } from 'react';
 import '../styles/home.css';
 
 const bgImages = [
-  require('../assets/achar.jpg'),
-  require('../assets/achar2.png'),
-  require('../assets/achar3.jpg'),
+  require('../assets/achar.jpg') // only 1 image now
 ];
 
 const videoSrc = require('../assets/nainai-making.MOV');
 
 export default function HomePage() {
-  const [current, setCurrent] = useState(0);
-  const isVideo = current === bgImages.length;
+  const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % (bgImages.length + 1));
-    }, 10000); // ⏳ 10s per background
-
-    return () => clearInterval(interval);
+    // Wait ~3.5s before switching to video (slightly after last text appears)
+    const timer = setTimeout(() => setShowVideo(true), 3500);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="home-page">
-      {isVideo ? (
+      {showVideo ? (
         <video
           className="background-video active"
           src={videoSrc}
@@ -34,7 +29,7 @@ export default function HomePage() {
       ) : (
         <div
           className="background-fader"
-          style={{ backgroundImage: `url(${bgImages[current]})` }}
+          style={{ backgroundImage: `url(${bgImages[0]})` }}
         />
       )}
 
